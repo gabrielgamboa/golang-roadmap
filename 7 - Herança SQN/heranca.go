@@ -21,4 +21,7 @@ func main() {
 	pessoa := pessoa{"Gabriel", "Gambôa", 22, 80}
 
 	fmt.Println(pessoa)
+
+	estudante := estudante{pessoa, "ADS", "IFSP HTO"}
+	fmt.Println(estudante)
 }
