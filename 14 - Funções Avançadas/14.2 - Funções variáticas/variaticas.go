@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // "numeros" dentro da função vira um slice
-// só pode ter um por função, e tem que ser o último parâmetro caso tenha mais de um param.
+// só pode ter um parâmetro variático por função, e tem que ser o último parâmetro caso tenha mais de um.
 func somarNumeros(numeros ...int) int {
 	var total int
 	for _, numero := range numeros {
