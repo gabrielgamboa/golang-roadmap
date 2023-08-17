@@ -11,8 +11,9 @@ func main() {
 
 	go escrever("Olá mundo!", channel)
 
+	//usando o canal e verificando se ele está aberto
 	for {
-		messageFromChannel, isOpen := <-channel
+		messageFromChannel, isOpen := <-channel //a variável só receberá o valor do canal quando tiver algo nele
 
 		if !isOpen {
 			break
@@ -20,6 +21,11 @@ func main() {
 
 		fmt.Println(messageFromChannel)
 	}
+
+	// //usando sintaxe reduzida
+	// for messageFromChannel := range channel {
+	// 	fmt.Println(messageFromChannel)
+	// }
 }
 
 func escrever(txt string, channel chan string) {
