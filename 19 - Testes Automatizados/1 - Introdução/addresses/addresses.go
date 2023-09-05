@@ -8,7 +8,7 @@ import (
 )
 
 func AddressType(address string) string {
-	validTypes := []string{"rua", "aveinda", "estrada", "rodovia"}
+	validTypes := []string{"rua", "avenida", "estrada", "rodovia"}
 
 	addressInLowerCase := strings.ToLower(address)
 	addressType := strings.Split(addressInLowerCase, " ")[0]
